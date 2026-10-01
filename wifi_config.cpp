@@ -1,5 +1,13 @@
 #include "wifi_config.h"
 
+#include <WiFiManager.h> // https://github.com/tzapu/WiFiManager
+
+WiFiManager wm;
+
+char *versaoFirmware = "v1.0";
+char *wifi_ssid = "Aqua-Smart";
+char *wifi_password = "a1b2c3d4";
+
 void wificonnect() {
   
     display.clearDisplay();  
@@ -46,7 +54,6 @@ void wificonnect() {
         display.display();
         estadoWiFi = 1;
         delay(1000);
-        
     }
 }
 
